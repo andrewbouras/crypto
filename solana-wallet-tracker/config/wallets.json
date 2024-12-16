@@ -1,0 +1,45 @@
+{
+  "wallets": [
+    {
+      "address": "4NcmptCFMTK3VWNyEhTETiQLvEcrmLtNtQVvtAqjXAZ4",
+      "label": "Example Wallet 1"
+    },
+    {
+      "address": "7Mjg8z2FjLAvKGGZmAbz6z52z4K17Lb42QZxhhTtKBdE"
+    },
+    {
+      "address": "HygwK1KmCt6vPg9Y3mWc5VD8psUey9hLpvdJXGFydAcR"
+    },
+    {
+      "address": "2SZBWdvn5PGfQfhxbKtVUyvZCC5UUtaoJBBet3CBcb68"
+    },
+    {
+      "address": "Cfy6caF6nwgRsYVFueDLui2SsA2jsKzb3pkAJDHLZfS7"
+    },
+    {
+      "address": "5GuzY83PyUQGfaGyBTwymHNdSVLYjfUqY32mdP2wLAGm"
+    },
+    {
+      "address": "BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h"
+    },
+    {
+      "address": "HK9ra3gGvDgJX4PhVY1MJ62zGBUmAWQ5rjxGyeUxyQFj"
+    },
+    {
+      "address": "71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b"
+    }
+  ],
+  "tokenTracking": {
+    "trackOnlyListed": false,
+    "trackedTokens": [
+      {
+        "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+        "symbol": "BONK"
+      },
+      {
+        "mint": "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+        "symbol": "SAMO"
+      }
+    ]
+  }
+}

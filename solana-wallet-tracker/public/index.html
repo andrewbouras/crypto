@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Wallet Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+            min-width: 300px;
+            display: none;
+        }
+        .alert.show {
+            display: block;
+            animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes fadeOut {
+            from {opacity: 1;}
+            to {opacity: 0;}
+        }
+        .activity-card {
+            transition: all 0.3s ease;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .activity-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .activity-card:hover .hide-button {
+            opacity: 1;
+        }
+        .hide-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+        .recent-activity {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+            color: white;
+        }
+        .market-card {
+            background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+            color: white;
+        }
+        .price-up {
+            color: #4caf50;
+        }
+        .price-down {
+            color: #f44336;
+        }
+        .pl-badge {
+            font-size: 0.875rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            margin-left: 0.5rem;
+        }
+        .pl-badge.positive {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: #4caf50;
+        }
+        .pl-badge.negative {
+            background-color: rgba(244, 67, 54, 0.1);
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <!-- Alert Container -->
+    <div id="alertContainer" class="alert" role="alert"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Solana Wallet Tracker</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Market Data -->
+        <div class="card mb-4 market-card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5 class="card-title mb-0">SOL Price</h5>
+                        <h3 id="solPrice">$0.00</h3>
+                        <p class="mb-0" id="priceChange">24h: 0.00%</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h5 class="card-title mb-0">Market Cap</h5>
+                        <h3 id="marketCap">$0.00B</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <h5 class="card-title mb-0">24h Volume</h5>
+                        <h3 id="volume">$0.00M</h3>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <small id="lastMarketUpdate" class="text-light">Last updated: Never</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Add Wallet Form -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Add New Wallet</h5>
+                        <form id="addWalletForm" class="row g-3">
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="walletAddress" placeholder="Wallet Address" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="walletName" placeholder="Wallet Name (Optional)">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100">Add Wallet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Card -->
+            <div class="col-md-6">
+                <div class="card mb-4 stats-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitoring Stats</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <h3 id="totalWallets">0</h3>
+                                <p class="mb-0">Wallets Monitored</p>
+                            </div>
+                            <div class="col-6">
+                                <h3 id="totalTransactions">0</h3>
+                                <p class="mb-0">Recent Transactions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card">
+            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Recent Activity</h5>
+                <span id="lastUpdate" class="small"></span>
+            </div>
+            <div class="card-body recent-activity" id="recentActivity">
+                <!-- Activity items will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Format currency
+        function formatCurrency(value, decimals = 2) {
+            if (value >= 1e9) {
+                return `$${(value / 1e9).toFixed(decimals)}B`;
+            }
+            if (value >= 1e6) {
+                return `$${(value / 1e6).toFixed(decimals)}M`;
+            }
+            return `$${value.toFixed(decimals)}`;
+        }
+
+        // Format percentage
+        function formatPercentage(value) {
+            return `${value >= 0 ? '+' : ''}${value.toFixed(2)}%`;
+        }
+
+        // Show alert function
+        function showAlert(message, type = 'success') {
+            const alertContainer = document.getElementById('alertContainer');
+            alertContainer.className = `alert alert-${type} show`;
+            alertContainer.textContent = message;
+            setTimeout(() => alertContainer.classList.remove('show'), 3000);
+        }
+
+        // Format date
+        function formatDate(date) {
+            return new Date(date).toLocaleString();
+        }
+
+        // Hide transaction
+        async function hideTransaction(signature) {
+            try {
+                const response = await fetch(`/api/transactions/${signature}/hide`, {
+                    method: 'POST'
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to hide transaction');
+                }
+
+                // Remove the card from UI
+                const card = document.querySelector(`[data-signature="${signature}"]`);
+                if (card) {
+                    card.remove();
+                }
+            } catch (error) {
+                console.error('Error hiding transaction:', error);
+                showAlert('Failed to hide transaction', 'danger');
+            }
+        }
+
+        // Update market data
+        async function updateMarketData() {
+            try {
+                const response = await fetch('/api/market/solana');
+                const data = await response.json();
+
+                // Store current price globally for P/L calculations
+                window.currentSolPrice = data.price;
+
+                document.getElementById('solPrice').textContent = formatCurrency(data.price, 2);
+                document.getElementById('marketCap').textContent = formatCurrency(data.marketCap, 2);
+                document.getElementById('volume').textContent = formatCurrency(data.volume24h, 2);
+
+                const priceChangeElement = document.getElementById('priceChange');
+                const priceChange = data.priceChange24h;
+                priceChangeElement.textContent = `24h: ${priceChange.toFixed(2)}%`;
+                priceChangeElement.className = priceChange >= 0 ? 'mb-0 price-up' : 'mb-0 price-down';
+
+                document.getElementById('lastMarketUpdate').textContent = 
+                    `Last updated: ${new Date().toLocaleString()}`;
+            } catch (error) {
+                console.error('Error updating market data:', error);
+            }
+        }
+
+        // Update stats and activity
+        async function updateDashboard() {
+            try {
+                // Fetch wallets and their recent transactions
+                const [walletsResponse, transactionsResponse] = await Promise.all([
+                    fetch('/api/wallets'),
+                    fetch('/api/transactions/recent')
+                ]);
+
+                const wallets = await walletsResponse.json();
+                const transactions = await transactionsResponse.json();
+
+                // Update stats
+                document.getElementById('totalWallets').textContent = wallets.length;
+                document.getElementById('totalTransactions').textContent = transactions.length;
+                document.getElementById('lastUpdate').textContent = `Last updated: ${new Date().toLocaleString()}`;
+
+                // Update activity feed
+                const activityHtml = transactions.map(tx => {
+                    const plClass = tx.profitLoss >= 0 ? 'positive' : 'negative';
+                    const plBadge = `<span class="pl-badge ${plClass}">${formatPercentage(tx.profitLossPercentage)}</span>`;
+
+                    return `
+                        <div class="activity-card card" data-signature="${tx.signature}">
+                            <button onclick="hideTransaction('${tx.signature}')" 
+                                    class="hide-button btn btn-sm btn-outline-danger">
+                                ✕
+                            </button>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <h6 class="card-title mb-1">
+                                            ${tx.type === 'receive' ? '📥 Received' : '📤 Sent'} 
+                                            <span class="text-primary">${tx.amount.toFixed(4)} SOL</span>
+                                            ${plBadge}
+                                        </h6>
+                                        <p class="card-text small text-muted mb-0">
+                                            Initial Value: ${formatCurrency(tx.originalValue)}
+                                            <br>
+                                            Current Value: ${formatCurrency(tx.currentValue)}
+                                            <br>
+                                            P/L: ${formatCurrency(tx.profitLoss)}
+                                            <br>
+                                            Wallet: ${tx.walletName || 'Unknown'}
+                                            <br>
+                                            Address: ${tx.walletAddress}
+                                        </p>
+                                    </div>
+                                    <small class="text-muted">
+                                        ${formatDate(tx.timestamp)}
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                document.getElementById('recentActivity').innerHTML = activityHtml || 
+                    '<p class="text-center text-muted my-4">No recent activity</p>';
+
+            } catch (error) {
+                console.error('Error updating dashboard:', error);
+            }
+        }
+
+        // Add new wallet
+        document.getElementById('addWalletForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const address = document.getElementById('walletAddress').value.trim();
+            const name = document.getElementById('walletName').value.trim();
+
+            try {
+                const response = await fetch('/api/wallets', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ address, name })
+                });
+
+                const data = await response.json();
+
+                if (response.status === 409) {
+                    showAlert(`⚠️ This wallet is already being monitored!`, 'warning');
+                    return;
+                }
+
+                if (!response.ok) {
+                    showAlert(data.error || 'Failed to add wallet', 'danger');
+                    return;
+                }
+
+                document.getElementById('walletAddress').value = '';
+                document.getElementById('walletName').value = '';
+                showAlert('✅ Wallet added successfully!', 'success');
+                updateDashboard();
+            } catch (error) {
+                console.error('Error adding wallet:', error);
+                showAlert('❌ Failed to add wallet', 'danger');
+            }
+        });
+
+        // Initial load and periodic updates
+        updateMarketData();
+        updateDashboard();
+        
+        // Update market data every minute
+        setInterval(updateMarketData, 60000);
+        
+        // Update dashboard every 30 seconds
+        setInterval(updateDashboard, 30000);
+    </script>
+</body>
+</html> 
