@@ -1,5 +1,0 @@
-# Paste wallet addresses below (one per line)
-# Lines starting with # are ignored
-# Empty lines are ignored
-
-2SZBWdvn5PGfQfhxbKtVUyvZCC5UUtaoJBBet3CBcb68
