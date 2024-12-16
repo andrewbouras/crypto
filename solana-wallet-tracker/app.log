@@ -1,0 +1,115 @@
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-12-16T01:50:30.686Z"}
+{"level":"info","message":"Loading 0 wallets from database...","timestamp":"2024-12-16T01:50:31.090Z"}
+{"level":"info","message":"Wallet monitoring started successfully","timestamp":"2024-12-16T01:50:31.090Z"}
+{"level":"info","message":"Wallet monitoring started","timestamp":"2024-12-16T01:50:31.090Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T01:50:31.093Z"}
+{"level":"info","message":"Started monitoring wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b ()","timestamp":"2024-12-16T01:51:01.632Z"}
+{"level":"info","message":"Initialized wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T01:51:02.053Z"}
+{"level":"info","message":"Received SIGINT signal. Shutting down gracefully...","timestamp":"2024-12-16T01:54:21.785Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-12-16T01:54:26.252Z"}
+{"level":"info","message":"Loading 1 wallets from database...","timestamp":"2024-12-16T01:54:26.583Z"}
+{"level":"info","message":"Started monitoring wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b (Unknown)","timestamp":"2024-12-16T01:54:26.637Z"}
+{"level":"info","message":"Wallet monitoring started successfully","timestamp":"2024-12-16T01:54:26.637Z"}
+{"level":"info","message":"Wallet monitoring started","timestamp":"2024-12-16T01:54:26.637Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T01:54:26.640Z"}
+{"level":"info","message":"Initialized wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T01:54:27.168Z"}
+{"level":"info","message":"Started monitoring wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h ()","timestamp":"2024-12-16T01:55:28.809Z"}
+{"level":"info","message":"Initialized wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T01:55:28.958Z"}
+{"level":"info","message":"Removed wallet 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b from shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T01:57:43.364Z"}
+{"level":"info","message":"Stopped monitoring wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b","timestamp":"2024-12-16T01:57:43.366Z"}
+{"level":"info","message":"Removed wallet BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h from shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T01:57:54.683Z"}
+{"level":"info","message":"Stopped monitoring wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h","timestamp":"2024-12-16T01:57:54.684Z"}
+{"level":"info","message":"Started monitoring wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h ()","timestamp":"2024-12-16T01:58:14.020Z"}
+{"level":"info","message":"Initialized wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T01:58:14.349Z"}
+{"level":"info","message":"Started monitoring wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 ()","timestamp":"2024-12-16T01:59:05.492Z"}
+{"level":"info","message":"Initialized wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T01:59:05.768Z"}
+{"level":"info","message":"Received SIGINT signal. Shutting down gracefully...","timestamp":"2024-12-16T02:01:13.624Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-12-16T02:01:18.117Z"}
+{"level":"info","message":"Loading 2 wallets from database...","timestamp":"2024-12-16T02:01:18.179Z"}
+{"level":"info","message":"Attempting to add wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h with name: Unknown","timestamp":"2024-12-16T02:01:18.180Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:01:18.245Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:01:18.245Z"}
+{"level":"info","message":"Started monitoring wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h (Unknown)","timestamp":"2024-12-16T02:01:18.246Z"}
+{"level":"info","message":"Attempting to add wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 with name: Unknown","timestamp":"2024-12-16T02:01:18.246Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:01:18.314Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:01:18.314Z"}
+{"level":"info","message":"Started monitoring wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 (Unknown)","timestamp":"2024-12-16T02:01:18.315Z"}
+{"level":"info","message":"Wallet monitoring started successfully","timestamp":"2024-12-16T02:01:18.315Z"}
+{"level":"info","message":"Wallet monitoring started","timestamp":"2024-12-16T02:01:18.315Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T02:01:18.318Z"}
+{"level":"info","message":"Initialized wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T02:01:18.601Z"}
+{"level":"info","message":"Initialized wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:01:22.699Z"}
+{"level":"info","message":"Removed wallet BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h from shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T02:01:31.439Z"}
+{"level":"info","message":"Stopped monitoring wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h","timestamp":"2024-12-16T02:01:31.440Z"}
+{"level":"info","message":"Removed wallet Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 from shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:01:32.918Z"}
+{"level":"info","message":"Stopped monitoring wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8","timestamp":"2024-12-16T02:01:32.918Z"}
+{"level":"info","message":"Attempting to add wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 with name: ","timestamp":"2024-12-16T02:01:35.361Z"}
+{"level":"info","message":"Database check result: Wallet does not exist","timestamp":"2024-12-16T02:01:35.417Z"}
+{"level":"info","message":"Creating new wallet document...","timestamp":"2024-12-16T02:01:35.418Z"}
+{"level":"info","message":"Saving wallet to MongoDB...","timestamp":"2024-12-16T02:01:35.423Z"}
+{"level":"info","message":"Wallet saved successfully","timestamp":"2024-12-16T02:01:35.484Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:01:35.484Z"}
+{"level":"info","message":"Started monitoring wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 ()","timestamp":"2024-12-16T02:01:35.484Z"}
+{"level":"info","message":"Initialized wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T02:01:35.819Z"}
+{"level":"info","message":"Received SIGINT signal. Shutting down gracefully...","timestamp":"2024-12-16T02:02:48.115Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2024-12-16T02:02:56.023Z"}
+{"level":"info","message":"Loading 8 wallets from database...","timestamp":"2024-12-16T02:02:56.087Z"}
+{"level":"info","message":"Attempting to add wallet: 4NcmptCFMTK3VWNyEhTETiQLvEcrmLtNtQVvtAqjXAZ4 with name: Unknown","timestamp":"2024-12-16T02:02:56.087Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.134Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.135Z"}
+{"level":"info","message":"Started monitoring wallet: 4NcmptCFMTK3VWNyEhTETiQLvEcrmLtNtQVvtAqjXAZ4 (Unknown)","timestamp":"2024-12-16T02:02:56.135Z"}
+{"level":"info","message":"Attempting to add wallet: HygwK1KmCt6vPg9Y3mWc5VD8psUey9hLpvdJXGFydAcR with name: Unknown","timestamp":"2024-12-16T02:02:56.135Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.197Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.198Z"}
+{"level":"info","message":"Started monitoring wallet: HygwK1KmCt6vPg9Y3mWc5VD8psUey9hLpvdJXGFydAcR (Unknown)","timestamp":"2024-12-16T02:02:56.198Z"}
+{"level":"info","message":"Attempting to add wallet: 2SZBWdvn5PGfQfhxbKtVUyvZCC5UUtaoJBBet3CBcb68 with name: Unknown","timestamp":"2024-12-16T02:02:56.198Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.247Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.248Z"}
+{"level":"info","message":"Started monitoring wallet: 2SZBWdvn5PGfQfhxbKtVUyvZCC5UUtaoJBBet3CBcb68 (Unknown)","timestamp":"2024-12-16T02:02:56.248Z"}
+{"level":"info","message":"Attempting to add wallet: Cfy6caF6nwgRsYVFueDLui2SsA2jsKzb3pkAJDHLZfS7 with name: Unknown","timestamp":"2024-12-16T02:02:56.248Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.297Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.297Z"}
+{"level":"info","message":"Started monitoring wallet: Cfy6caF6nwgRsYVFueDLui2SsA2jsKzb3pkAJDHLZfS7 (Unknown)","timestamp":"2024-12-16T02:02:56.297Z"}
+{"level":"info","message":"Attempting to add wallet: 5GuzY83PyUQGfaGyBTwymHNdSVLYjfUqY32mdP2wLAGm with name: Unknown","timestamp":"2024-12-16T02:02:56.297Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.348Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.349Z"}
+{"level":"info","message":"Started monitoring wallet: 5GuzY83PyUQGfaGyBTwymHNdSVLYjfUqY32mdP2wLAGm (Unknown)","timestamp":"2024-12-16T02:02:56.349Z"}
+{"level":"info","message":"Attempting to add wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h with name: Unknown","timestamp":"2024-12-16T02:02:56.349Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.398Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.398Z"}
+{"level":"info","message":"Started monitoring wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h (Unknown)","timestamp":"2024-12-16T02:02:56.398Z"}
+{"level":"info","message":"Attempting to add wallet: HK9ra3gGvDgJX4PhVY1MJ62zGBUmAWQ5rjxGyeUxyQFj with name: Unknown","timestamp":"2024-12-16T02:02:56.398Z"}
+{"level":"info","message":"Initialized wallet: 4NcmptCFMTK3VWNyEhTETiQLvEcrmLtNtQVvtAqjXAZ4 on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T02:02:56.445Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.446Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.446Z"}
+{"level":"info","message":"Started monitoring wallet: HK9ra3gGvDgJX4PhVY1MJ62zGBUmAWQ5rjxGyeUxyQFj (Unknown)","timestamp":"2024-12-16T02:02:56.447Z"}
+{"level":"info","message":"Attempting to add wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b with name: Unknown","timestamp":"2024-12-16T02:02:56.447Z"}
+{"level":"info","message":"Database check result: Wallet exists","timestamp":"2024-12-16T02:02:56.497Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:02:56.497Z"}
+{"level":"info","message":"Started monitoring wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b (Unknown)","timestamp":"2024-12-16T02:02:56.497Z"}
+{"level":"info","message":"Wallet monitoring started successfully","timestamp":"2024-12-16T02:02:56.497Z"}
+{"level":"info","message":"Wallet monitoring started","timestamp":"2024-12-16T02:02:56.497Z"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2024-12-16T02:02:56.499Z"}
+{"level":"info","message":"Initialized wallet: HygwK1KmCt6vPg9Y3mWc5VD8psUey9hLpvdJXGFydAcR on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:02:56.604Z"}
+{"level":"info","message":"Initialized wallet: 2SZBWdvn5PGfQfhxbKtVUyvZCC5UUtaoJBBet3CBcb68 on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:02:56.646Z"}
+{"level":"info","message":"Initialized wallet: Cfy6caF6nwgRsYVFueDLui2SsA2jsKzb3pkAJDHLZfS7 on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:02:56.687Z"}
+{"level":"info","message":"Initialized wallet: 5GuzY83PyUQGfaGyBTwymHNdSVLYjfUqY32mdP2wLAGm on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:02:56.728Z"}
+{"level":"info","message":"Initialized wallet: BvZRGSe6ot9eooGUgZpBjhNcDjswX6L9fXUoFTUH2A2h on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:02:56.768Z"}
+{"level":"info","message":"Initialized wallet: HK9ra3gGvDgJX4PhVY1MJ62zGBUmAWQ5rjxGyeUxyQFj on shared connection https://api.mainnet-beta.solana.com","timestamp":"2024-12-16T02:02:56.810Z"}
+{"level":"info","message":"Initialized wallet: 71sFQDXemZcuwrLmihpecyiRjzRZ9vQGbGP7zX4sAL3b on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T02:03:00.544Z"}
+{"level":"info","message":"Attempting to add wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 with name: ","timestamp":"2024-12-16T02:03:07.655Z"}
+{"level":"info","message":"Database check result: Wallet does not exist","timestamp":"2024-12-16T02:03:07.709Z"}
+{"level":"info","message":"Creating new wallet document...","timestamp":"2024-12-16T02:03:07.709Z"}
+{"level":"info","message":"Saving wallet to MongoDB...","timestamp":"2024-12-16T02:03:07.713Z"}
+{"level":"info","message":"Wallet saved successfully","timestamp":"2024-12-16T02:03:07.773Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:03:07.773Z"}
+{"level":"info","message":"Started monitoring wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 ()","timestamp":"2024-12-16T02:03:07.773Z"}
+{"level":"info","message":"Initialized wallet: Az5a69RQdxXxxDqfQCKwY3LPcUEDYCdXpQ4EiZRsLEa8 on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T02:03:07.816Z"}
+{"level":"info","message":"Attempting to add wallet: 8uYZtcNLJ4DbJeZVt9DioAPXAzdG1jr8vP4xgogfrqV2 with name: ","timestamp":"2024-12-16T02:05:39.073Z"}
+{"level":"info","message":"Database check result: Wallet does not exist","timestamp":"2024-12-16T02:05:39.496Z"}
+{"level":"info","message":"Creating new wallet document...","timestamp":"2024-12-16T02:05:39.497Z"}
+{"level":"info","message":"Saving wallet to MongoDB...","timestamp":"2024-12-16T02:05:39.497Z"}
+{"level":"info","message":"Wallet saved successfully","timestamp":"2024-12-16T02:05:39.584Z"}
+{"level":"info","message":"Setting up WebSocket subscription...","timestamp":"2024-12-16T02:05:39.585Z"}
+{"level":"info","message":"Started monitoring wallet: 8uYZtcNLJ4DbJeZVt9DioAPXAzdG1jr8vP4xgogfrqV2 ()","timestamp":"2024-12-16T02:05:39.585Z"}
+{"level":"info","message":"Initialized wallet: 8uYZtcNLJ4DbJeZVt9DioAPXAzdG1jr8vP4xgogfrqV2 on shared connection https://api.mainnet-beta.solana.com/","timestamp":"2024-12-16T02:05:39.628Z"}
